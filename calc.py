@@ -29,9 +29,11 @@ def print_menu():
     print_space()
 
 def print_conversion_menu():
-    print("Convert decimal number to: ")
-    print("[1] Binary")
-    print("[2] Octal")
+    """ Prints submenu for decimal-origin conversions """
+    print(yellow_text + "Convert decimal number to: " + color_default)
+    print(blue_text + "[1] Binary (Base 2)")
+    print("[2] Octal (Base 8)")
+    print("[3] Hexadecimal (Base 16)" + color_default)
     print_space()
     
 def press_enter():
@@ -105,6 +107,10 @@ while( opc != '0' ):
             ans = oct(int(opc2))
             print(red_text + "Result: " + str(ans)  + color_default +  "\n")
             press_enter()
+        elif(select == "3"):
+            ans = hex(int(opc2))
+            print(red_text + "Result: " + str(ans)  + color_default +  "\n")
+            press_enter()
     
     elif(opc == '8'):
         num1 = input("Enter your number (not 0): ")
@@ -121,7 +127,14 @@ while( opc != '0' ):
     elif(opc == '9'):
         year = input("What year were you born? ")
         age = 2020 - int(year)
-        print(red_text + "You are " + str(age) + " years old." + color_default + "\n")
-        press_enter()
+        if(age > 120):
+            print("It is highly probable that you made a mistake with the year")
+            press_enter()
+        elif(age <= 4):
+            print(red_text + "\n\nSorry, this application is for ages 5+ ONLY \n" + color_default)
+            press_enter()
+        else:
+            print(red_text + "You are " + str(age) + " years old." + color_default + "\n")
+            press_enter()
 
 print("Goodbye...")
