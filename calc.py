@@ -30,8 +30,12 @@ while( opc != '0' ):
 
     opc = input('Please Choose An Option: ')
 
+    if(opc == '5'):
+        year = input("What year were you born? ")
+        age = 2020 - int(year)
+        print("You are " + str(age) + " years old.")
 
-    if(opc != '0' & opc !='5'):
+    if(opc != '0' and opc != '5'):
         num1 = input("First number: ")
         num2 = input("Second number: ")
 
@@ -54,10 +58,7 @@ while( opc != '0' ):
         else:
             print("WARNING -- YOU WILL DESTROY THE UNIVERSE")
     
-    elif(opc == '5')
-        year = input("What year were you born? ")
-        age = 2020 - int(year)
-        print("You are " + age + " years old.")
+
         
 
 print("Goodbye...")
