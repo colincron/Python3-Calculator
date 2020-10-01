@@ -45,7 +45,7 @@ while( opc != '0' ):
         else:
             print(num1 + " is even!")
 
-    if(opc != '0' and opc != '6' and opc != '5'):
+    if(opc == '1' or opc == '2' or opc == '3' or opc == '4'):
         num1 = input("First number: ")
         num2 = input("Second number: ")
 
