@@ -21,7 +21,7 @@ def print_menu():
     print("[9] My age" + color_default)
     print_space()
     print_space()
-    print(red_underline + "[0] Exit" + color_default)
+    print(red_subdued + "[0] Exit" + color_default)
     print_space()
 
 def press_enter():
@@ -35,7 +35,7 @@ yellow_text = "\033[33m"
 green_text = "\033[32;1m"
 red_text = "\033[31;1m"
 cyan_text = "\033[36;1m"
-red_underline = "\033[31;5m"
+red_subdued = "\033[31;5m"
 
 color_default = "\033[m"
 
