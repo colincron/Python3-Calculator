@@ -1,8 +1,10 @@
 
 def print_space():
+    """ literally just prints a space so I don't have to type as much """
     print(" ")
 
 def print_menu():
+    """ Displays menu options """
     print(cyan_text + "*" * 21 + color_default)
     print_space()
     print(cyan_text + "  Python Calculator" + color_default)
@@ -24,7 +26,9 @@ def print_menu():
     print(red_subdued + "[0] Exit" + color_default)
     print_space()
 
+    
 def press_enter():
+    """ Asks user to press enter to continue """
     input(yellow_text + "Press Enter to continue...\n\n\n" + color_default)
 
 
