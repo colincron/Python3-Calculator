@@ -1,40 +1,31 @@
 
-def print_space():
-    """ literally just prints a space so I don't have to type as much """
-    print(" ")
-
 def print_menu():
     """ Displays menu options """
-    print(cyan_text + "*" * 21 + color_default)
-    print_space()
-    print(cyan_text + "  Python Calculator" + color_default)
-    print_space()
-    print(cyan_text + "*" * 21 + color_default)
+    print(cyan_text + "*" * 21 + "\n")
 
-    print_space()
+    print("  Python Calculator\n")
+
+    print("*" * 21 + "\n" + color_default)
+
     print(blue_text + "[1] Add" + color_default)
     print(yellow_text + "[2] Subtract" + color_default)
     print(blue_text + "[3] Multiply" + color_default)
     print(yellow_text + "[4] Divide" + color_default)
-    print(blue_text + "[5] Exponents" + color_default)
-    print_space()
-    print(yellow_text + "[6] Convert Numerical Notation From Decimal" + color_default)
-    print_space()
-    print(red_text + "[8] Even or Odd?")
-    print_space()
-    print("[9] My age" + color_default)
-    print_space()
-    print_space()
-    print(red_subdued + "[0] Exit" + color_default)
-    print_space()
+    print(blue_text + "[5] Exponents\n" + color_default)
+
+    print(yellow_text + "[6] Convert Numerical Notation From Decimal\n" + color_default)
+    print(red_text + "[8] Even or Odd?\n")
+
+    print("[9] My age\n\n" + color_default)
+ 
+    print(red_subdued + "[0] Exit\n" + color_default)
 
 def print_conversion_menu():
     """ Prints submenu for decimal-origin conversions """
     print(yellow_text + "Convert decimal number to: " + color_default)
-    print(blue_text + "[1] Binary (Base 2)")
+    print(cyan_text + "[1] Binary (Base 2)")
     print("[2] Octal (Base 8)")
-    print("[3] Hexadecimal (Base 16)" + color_default)
-    print_space()
+    print("[3] Hexadecimal (Base 16)\n" + color_default)
     
 def press_enter():
     """ Asks user to press enter to continue """
@@ -98,7 +89,7 @@ while( opc != '0' ):
     elif(opc == '6'):
         print_conversion_menu()
         select = input("Select a numerical notation to convert to: ")
-        opc2 = input("Select number to convert: ")
+        opc2 = input("Select decimal number (must be an integer) to convert: ")
         if(select == "1"):
             ans = bin(int(opc2))
             print(red_text + "Result: " + str(ans)  + color_default +  "\n")
