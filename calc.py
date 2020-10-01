@@ -3,11 +3,11 @@ def print_space():
     print(" ")
 
 def print_menu():
-    print("*" * 20)
+    print("*" * 21)
     print_space()
     print("  Python Calculator")
     print_space()
-    print("*" * 20)
+    print("*" * 21)
 
     print_space()
     print("[1] Add")
@@ -24,8 +24,15 @@ def print_menu():
     print("[0] Exit")
     print_space()
 
+def press_enter():
+    input("Press Enter to continue...")
+
 
 #instruction
+
+green_text = "\033[32m"
+red_text = "\033[31;1m"
+color_default = "\033[m"
 
 opc = ''
 while( opc != '0' ):
@@ -35,56 +42,56 @@ while( opc != '0' ):
     opc = input('Please Choose An Option: ')
 
     if(opc == '1' or opc == '2' or opc == '3' or opc == '4'):
-        num1 = input("First number: ")
-        num2 = input("Second number: ")
+        num1 = input(green_text + "First number: " + color_default)
+        num2 = input(green_text + "Second number: " + color_default)
 
     if(opc == '1'):
         res = float(num1) + float(num2)
-        print("Result: " + str(res) + "\n")
-        input("Press Enter to continue...")
+        print(red_text + "Result: " + str(res) + color_default + "\n")
+        press_enter()
 
     elif(opc == '2'):
         res = float(num1) - float(num2)
-        print("Result: " + str(res) + "\n")
-        input("Press Enter to continue...")
+        print(red_text + "Result: " + str(res) + color_default + "\n")
+        press_enter()
 
     elif(opc == '3'):
         res = float(num1) * float(num2)
-        print("Result: " + str(res) + "\n")
-        input("Press Enter to continue...")
+        print(red_text + "Result: " + str(res) + color_default + "\n")
+        press_enter()
 
     elif(opc == '4'):
         if(float(num2) != 0):
             res = float(num1) / float(num2)
-            print("Result: " + str(res) + "\n")
-            input("Press Enter to continue...")
+            print(red_text + "Result: " + str(res)  + color_default +  "\n")
+            press_enter()
         else:
-            print("WARNING -- YOU WILL DESTROY THE UNIVERSE \n")
-            input("Press Enter to continue...")
+            print(red_text + "WARNING -- YOU WILL DESTROY THE UNIVERSE!" + color_default +  "\n")
+            press_enter()
     
     elif(opc == '5'):
         base = input("Enter base number: ")
         exponent = input("Enter exponent: ")
         res = float(base) ** float(exponent)
-        print("The solution is: " + str(res) + "\n")
-        input("Press Enter to continue...")
+        print(red_text + "The solution is: " + str(res) + color_default + "\n")
+        press_enter()
     
     elif(opc == '8'):
         num1 = input("Enter your number (not 0): ")
         if(float(num1) == 0):
-            print("Bruh, I said not 0..." + "\n")
-            input("Press Enter to continue...")
+            print(red_text + "Bruh, I said not 0..." + color_default + "\n")
+            press_enter()
         elif(float(num1) % 2 != 0):
-            print(num1 + " is odd!" + "\n")
-            input("Press Enter to continue...")
+            print(red_text + num1 + " is odd!" + color_default + "\n")
+            press_enter()
         else:
-            print(num1 + " is even!" + "\n")
-            input("Press Enter to continue...")
+            print(red_text + num1 + " is even!" + color_default + "\n")
+            press_enter()
     
     elif(opc == '9'):
         year = input("What year were you born? ")
         age = 2020 - int(year)
-        print("You are " + str(age) + " years old." + "\n")
-        input("Press Enter to continue...")
+        print(red_text + "You are " + str(age) + " years old." + color_default + "\n")
+        press_enter()
 
 print("Goodbye...")
