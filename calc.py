@@ -14,7 +14,10 @@ def print_menu():
     print("[2] Subtract")
     print("[3] Multiply")
     print("[4] Divide")
-    print("[5] My age")
+    print_space()
+    print("[5] Even or Odd?")
+    print_space()
+    print("[6] My age")
     print_space()
     print_space()
     print("[0] Exit")
@@ -30,12 +33,19 @@ while( opc != '0' ):
 
     opc = input('Please Choose An Option: ')
 
-    if(opc == '5'):
+    if(opc == '6'):
         year = input("What year were you born? ")
         age = 2020 - int(year)
         print("You are " + str(age) + " years old.")
+    
+    elif(opc == '5'):
+        num1 = input("Enter your number: ")
+        if(int(num1) % 2 != 0):
+            print(num1 + " is odd!")
+        else:
+            print(num1 + " is even!")
 
-    if(opc != '0' and opc != '5'):
+    if(opc != '0' and opc != '6' and opc != '5'):
         num1 = input("First number: ")
         num2 = input("Second number: ")
 
@@ -58,7 +68,6 @@ while( opc != '0' ):
         else:
             print("WARNING -- YOU WILL DESTROY THE UNIVERSE")
     
-
-        
-
+    
+ 
 print("Goodbye...")
