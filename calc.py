@@ -40,41 +40,51 @@ while( opc != '0' ):
 
     if(opc == '1'):
         res = float(num1) + float(num2)
-        print("Result: " + str(res))
+        print("Result: " + str(res) + "\n")
+        input("Press Enter to continue...")
 
     elif(opc == '2'):
         res = float(num1) - float(num2)
-        print("Result: " + str(res))
+        print("Result: " + str(res) + "\n")
+        input("Press Enter to continue...")
 
     elif(opc == '3'):
         res = float(num1) * float(num2)
-        print("Result: " + str(res))
+        print("Result: " + str(res) + "\n")
+        input("Press Enter to continue...")
 
     elif(opc == '4'):
         if(float(num2) != 0):
             res = float(num1) / float(num2)
-            print("Result: " + str(res))
+            print("Result: " + str(res) + "\n")
+            input("Press Enter to continue...")
         else:
-            print("WARNING -- YOU WILL DESTROY THE UNIVERSE")
+            print("WARNING -- YOU WILL DESTROY THE UNIVERSE \n")
+            input("Press Enter to continue...")
     
     elif(opc == '5'):
         base = input("Enter base number: ")
         exponent = input("Enter exponent: ")
         res = float(base) ** float(exponent)
-        print("The solution is: " + str(res))
+        print("The solution is: " + str(res) + "\n")
+        input("Press Enter to continue...")
     
     elif(opc == '8'):
         num1 = input("Enter your number (not 0): ")
         if(float(num1) == 0):
-            print("Bruh, I said not 0...")
+            print("Bruh, I said not 0..." + "\n")
+            input("Press Enter to continue...")
         elif(float(num1) % 2 != 0):
-            print(num1 + " is odd!")
+            print(num1 + " is odd!" + "\n")
+            input("Press Enter to continue...")
         else:
-            print(num1 + " is even!")
+            print(num1 + " is even!" + "\n")
+            input("Press Enter to continue...")
     
     elif(opc == '9'):
         year = input("What year were you born? ")
         age = 2020 - int(year)
-        print("You are " + str(age) + " years old.")
+        print("You are " + str(age) + " years old." + "\n")
+        input("Press Enter to continue...")
 
 print("Goodbye...")
