@@ -34,26 +34,6 @@ while( opc != '0' ):
 
     opc = input('Please Choose An Option: ')
 
-    if(opc == '9'):
-        year = input("What year were you born? ")
-        age = 2020 - int(year)
-        print("You are " + str(age) + " years old.")
-    
-    elif(opc == '8'):
-        num1 = input("Enter your number (not 0): ")
-        if(float(num1) == 0):
-            print("Bruh, I said not 0...")
-        elif(float(num1) % 2 != 0):
-            print(num1 + " is odd!")
-        else:
-            print(num1 + " is even!")
-    
-    elif(opc == '5'):
-        base = input("Enter base number: ")
-        exponent = input("Enter exponent: ")
-        res = float(base) ** float(exponent)
-        print("The solution is: " + str(res))
-
     if(opc == '1' or opc == '2' or opc == '3' or opc == '4'):
         num1 = input("First number: ")
         num2 = input("Second number: ")
@@ -76,5 +56,25 @@ while( opc != '0' ):
             print("Result: " + str(res))
         else:
             print("WARNING -- YOU WILL DESTROY THE UNIVERSE")
+    
+    elif(opc == '5'):
+        base = input("Enter base number: ")
+        exponent = input("Enter exponent: ")
+        res = float(base) ** float(exponent)
+        print("The solution is: " + str(res))
+    
+    elif(opc == '8'):
+        num1 = input("Enter your number (not 0): ")
+        if(float(num1) == 0):
+            print("Bruh, I said not 0...")
+        elif(float(num1) % 2 != 0):
+            print(num1 + " is odd!")
+        else:
+            print(num1 + " is even!")
+    
+    elif(opc == '9'):
+        year = input("What year were you born? ")
+        age = 2020 - int(year)
+        print("You are " + str(age) + " years old.")
 
 print("Goodbye...")
