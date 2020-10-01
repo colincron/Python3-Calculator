@@ -18,6 +18,8 @@ def print_menu():
     print(yellow_text + "[4] Divide" + color_default)
     print(blue_text + "[5] Exponents" + color_default)
     print_space()
+    print(yellow_text + "[6] Convert Numerical Notation From Decimal" + color_default)
+    print_space()
     print(red_text + "[8] Even or Odd?")
     print_space()
     print("[9] My age" + color_default)
@@ -26,6 +28,11 @@ def print_menu():
     print(red_subdued + "[0] Exit" + color_default)
     print_space()
 
+def print_conversion_menu():
+    print("Convert decimal number to: ")
+    print("[1] Binary")
+    print("[2] Octal")
+    print_space()
     
 def press_enter():
     """ Asks user to press enter to continue """
@@ -85,6 +92,19 @@ while( opc != '0' ):
         res = float(base) ** float(exponent)
         print(red_text + "The solution is: " + str(res) + color_default + "\n")
         press_enter()
+
+    elif(opc == '6'):
+        print_conversion_menu()
+        select = input("Select a numerical notation to convert to: ")
+        opc2 = input("Select number to convert: ")
+        if(select == "1"):
+            ans = bin(int(opc2))
+            print(red_text + "Result: " + str(ans)  + color_default +  "\n")
+            press_enter()
+        elif(select == "2"):
+            ans = oct(int(opc2))
+            print(red_text + "Result: " + str(ans)  + color_default +  "\n")
+            press_enter()
     
     elif(opc == '8'):
         num1 = input("Enter your number (not 0): ")
